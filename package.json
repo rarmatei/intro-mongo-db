@@ -2,10 +2,11 @@
   "name": "intro-to-mongodb",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Scott Moss <willscottmoss@gmail.com>",
+  "author": "Original author: Scott Moss <willscottmoss@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "jest --runInBand"
+    "test": "jest --runInBand",
+    "start": "nodemon exercises/app/index.js"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
@@ -19,6 +20,7 @@
     "setupTestFrameworkScriptFile": "<rootDir>/testconfig.js"
   },
   "devDependencies": {
-    "jest": "^23.6.0"
+    "jest": "^23.6.0",
+    "nodemon": "^2.0.1"
   }
 }

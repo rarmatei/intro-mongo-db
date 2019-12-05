@@ -10,7 +10,7 @@ app.use(urlencoded({ extended: true }));
 app.use(json());
 
 app.get("/todo/:id", async (req, res) => {
-  const todoId = req.params.id;
+  const id = req.params.id;
   const todo = await Todo.findById(id).exec();
   res.status(200).json(todo);
 });
