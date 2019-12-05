@@ -11,7 +11,7 @@ beforeAll(async () => {
 afterEach(async () => {
   let promises = [];
   for (let i in mongoose.connection.collections) {
-    promises.push(mongoose.connection.collections[i].remove());
+    promises.push(mongoose.connection.collections[i].deleteMany({}));
   }
   await Promise.all(promises);
 });
