@@ -10,7 +10,7 @@ app.use(urlencoded({ extended: true }));
 app.use(json());
 
 app.get("/todo/:id", async (req, res) => {
-  const todoId = req.params.id;
+  const id = req.params.id;
 });
 
 app.get("/todos", async (req, res) => {});
@@ -19,7 +19,7 @@ app.post("/todo", async () => {
   const todoToCreate = req.body.todo;
 });
 
-connect(/**add mongo url here */)
+connect("app")
   .then(() =>
     app.listen(4000, () => {
       console.log("server on http://localhost:4000");
