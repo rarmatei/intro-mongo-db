@@ -16,9 +16,7 @@ app.get("/todo/:id", async (req, res) => {
 });
 
 app.get("/todos", async (req, res) => {
-  const todos = await Todo.find({})
-    .lean()
-    .exec();
+  const todos = await Todo.find({}).exec();
   res.status(200).json(todos);
 });
 
