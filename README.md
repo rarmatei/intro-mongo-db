@@ -1,16 +1,27 @@
 ### Setting up
 
-- download postman
-- Install Atlas DB
-- Get your connection url
-- Make sure you use a stupid password for the user, and not your real one
-- Add it to connection.js
-- run `npm install`
+1. Download and install [POSTMAN](https://www.getpostman.com/)
+2. Go to [AtlasDB](https://cloud.mongodb.com/) and register for a new account
+3. Chose "Starter Clusters" on the left and click "Create a cluster"
+4. Chose "AWS" on the top row
+5. Chose "Ireland"
+6. Click "Create cluster" at the bottom
+7. Wait for your cluster to be created
+8. Click on "Connect"
+9. Click on "Add your current IP Address" and add it
+10. Enter a username and password below - IMPORTANT: chose a stupid/random password, don't use your main password. Make sure you remember both the user and the password!
+11. "Choose a connection method" --> "Connect to your Application"
+12. Chose "NodeJS" from the Driver list
+13. Copy the connection string up to and including `..mongodb.net`
 
-TODO: invert the two branches: master needs to be start, and solution needs to be master
-TODO: fix solution in app/todo.js - todoId, remove lean()
+![Connection string example](connection_string.png)
 
-finish above instructions
+14. Open up the file `exercises/` and paste in your string into the `url` variable. It should look like this:
+
+![Connect.js example](connectjs.png)
+
+15. Replace `<password>` in the url with the password you created in step 10.
+16. Run `npm install`
 
 ### Models
 
